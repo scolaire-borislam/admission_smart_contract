@@ -1,0 +1,121 @@
+Starting migrations...
+======================
+> Network name:    'dashboard'
+> Network id:      80001
+> Block gas limit: 20136937 (0x13343e9)
+
+
+01_scolaire_deployment.js
+=========================
+
+   Replacing 'Scolaire'
+   --------------------
+   > transaction hash:    0x30fdf11c99dbd4679450cfb0999a1d261e2dbe394ce4e4c5a3736c9c4fd148desage.
+   > Blocks: 8            Seconds: 16
+   > contract address:    0x1561eb9aE4dd153334C978188972BabC4fae302B
+   > block number:        47083904
+   > block timestamp:     1710520121
+   > account:             0xB9Ffae8e8ce81f3f6C2Cf8bE36eEDBAaB23D3BCa
+   > balance:             7.56756164203766558
+   > gas used:            2689884 (0x290b5c)
+   > gas price:           2.500000015 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00672471004034826 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00672471004034826 ETH
+
+
+02_scolaireApplication_deployment.js
+====================================
+
+   Deploying 'ScolaireApplication'
+   -------------------------------
+   > transaction hash:    0x3021943d099d217aba9f1c17913f9d36c64f24799bc12b5ddaf2cbce7afa3089sage.
+   > Blocks: 4            Seconds: 12
+   > contract address:    0xa9e8c6F5ccbf8893881FaB21baA6126D6b7Cc6f6
+   > block number:        47083912
+   > block timestamp:     1710520137
+   > account:             0xB9Ffae8e8ce81f3f6C2Cf8bE36eEDBAaB23D3BCa
+   > balance:             7.55891194198576738
+   > gas used:            3459880 (0x34cb28)
+   > gas price:           2.50000003 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0086497001037964 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.0086497001037964 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.01537441014414466 ETH
+
+
+================
+
+
+01_scolaire_deployment.js
+=========================
+
+   Replacing 'Scolaire'
+   --------------------
+   > transaction hash:    0x6bf192656809f89b1e1dc36d1e75940cb8ce588903d63ba24a3acd2782e97071sage.
+   > Blocks: 27           Seconds: 56
+   > contract address:    0x74f0D0c3f06D3843B5fECAE67c5EB90F6e8aC70b
+   > block number:        47123276
+   > block timestamp:     1710607248
+   > account:             0xB9Ffae8e8ce81f3f6C2Cf8bE36eEDBAaB23D3BCa
+   > balance:             7.547084911856769385
+   > gas used:            2689884 (0x290b5c)
+   > gas price:           2.500000015 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00672471004034826 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00672471004034826 ETH
+
+
+02_scolaireApplication_deployment.js
+====================================
+
+   Replacing 'ScolaireApplication'
+   -------------------------------
+   > transaction hash:    0xb853a990d7918ef5cbc673ce4a57e45d866926d6458e7f37353c6001d6486d43sage.
+   > Blocks: 11           Seconds: 28
+   > contract address:    0xbc89f7e17700D2E50c660E0967714e8f6617Baaa
+   > block number:        47123291
+   > block timestamp:     1710607280
+   > account:             0xB9Ffae8e8ce81f3f6C2Cf8bE36eEDBAaB23D3BCa
+   > balance:             7.538435211804871185
+   > gas used:            3459880 (0x34cb28)
+   > gas price:           2.50000003 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0086497001037964 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.0086497001037964 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.01537441014414466 ETH
+
+
+boris> ~/development/HKIT_Project_contract (main)%npx truffle run verify Scolaire ScolaireApplication --network dashboard
+Verifying contracts on polygonscan
+   Verifying Scolaire
+   Pass - Verified: https://mumbai.polygonscan.com/address/0x74f0D0c3f06D3843B5fECAE67c5EB90F6e8aC70b#code
+   Verifying ScolaireApplication
+   Pass - Verified: https://mumbai.polygonscan.com/address/0xbc89f7e17700D2E50c660E0967714e8f6617Baaa#code
+   Successfully verified 2 contract(s).
+Verifying contracts on sourcify
+   Verifying Scolaire
+   Pass - Verified: https://sourcify.dev/#/lookup/0x74f0D0c3f06D3843B5fECAE67c5EB90F6e8aC70b
+   Verifying ScolaireApplication
+   Pass - Verified: https://sourcify.dev/#/lookup/0xbc89f7e17700D2E50c660E0967714e8f6617Baaa
+   Successfully verified 2 contract(s).

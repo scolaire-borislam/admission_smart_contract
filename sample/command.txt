@@ -1,0 +1,99 @@
+nvm use 18.18.2
+npm install -g truffle
+npm install
+truffle dashboard
+truffle compile
+truffle console --network dashboard
+truffle migrate --network dashboard
+
+npx truffle run verify Scolaire ScolaireApplication --network dashboard
+truffle run verify  ScolaireApplication --network dashboard
+truffle run verify  Scolaire --network dashboard
+npx truffle run verify  ScolaireApplication --network dashboard
+web3.eth.getAccounts();
+accounts
+const s1= await Scolaire.deployed()
+const s2= await ScolaireApplication.deployed()
+sc.name()
+s2.address;
+sc.ownerOf(0);
+sc.tokenURIs(0);
+
+await sc.safeMint(accounts[1], "SCOL_1.json");
+let s4="0x334073aE2f3d5DfC899d32BDA315f34869A8a908"
+
+let toadd="0x27a142063699f545ec932555642c4a730e8c18fc"
+await SCOL_1.safeMint(toadd, "UWL-XXXXX");
+
+let args = ["boris.testphone@gmail.com", "UWL-CS-CYB-SEC-20240318-023825"]; //not work
+let args = ["boris.testphone@gmail.com", "UWL-CS-CYB-SEC-20240318023825"]; //
+let args = ["aws3.boris@gmail.com", "UWL-CS-CYB-SEC-20240303174234"];  //work -old
+let args = ["aws3.boris@gmail.com", "UWL-CS-20240318023825"];  //work -new
+
+
+args = ["aws3.boris@gmail.com", "UWL-CF-20240310023529",url];
+
+let subscriptionId = 831; 
+//let applicationNo = "UWL-CS-CYB-SEC-20240318-023825"
+let url ="https://524cx7n9db.execute-api.ap-southeast-1.amazonaws.com/Prod/check_req_ai"
+
+let args = ["aws3.boris@gmail.com", "UWL-CS-20240303174234",url];  //work
+
+let args = ["boris.testphone@gmail.com", "UWL-CS-20240318023825",url];
+
+await s2.sendRequest(subscriptionId,args);
+
+//debug by fork the testnet / mainnet
+ganache -f rpc-url
+truffle debug--fetch-external <txh> --url http://127.0.0.1:8545
+truffle debug --fetch-external 0x226f605bb2d1adca6d2a111f5ebffcfa6ba3cc59eb71716f09f3213dcd83e0e5 --url http://127.0.0.1:8545
+// add breakpoint
+// o -step over
+// v - view vairable
+b ScolaireApplication:83
+
+await s2.updateStatus("UWL-CS-20240318023825","SUBMITTED","");
+await s2.updateStatus("UWL-CS-20240318023825","CONDITIONALLY-APPROVED","");
+await s2.updateStatus("UWL-CS-20240318023825","APPROVED");
+
+
+await s2.updateStatus("UWL-CS-20240303174234","SUBMITTED");
+await s2.updateStatus("UWL-CS-20240303174234","CONDITIONALLY-APPROVED");
+await s2.updateStatus("UWL-CS-20240303174234","APPROVED");
+
+await s2.updateStatus("UWL-CS-20240303174234","HELLO");
+
+await s2.updateStatus("UWL-CS-XXX","SUBMITTED","");
+await s2.updateStatus("UWL-CS-XXX","CONDITIONALLY-APPROVED","EN:PASS#DS:PASS");
+
+#####################
+Testing code in chainlink function playground
+#####################
+const email = args[0];
+const app_id = args[1];
+const url = 'https://524cx7n9db.execute-api.ap-southeast-1.amazonaws.com/Prod/check_req_ai';
+const param = {'email': email,'app_id': app_id};
+const checkCertRequest = Functions.makeHttpRequest({
+      url: url,
+      method: 'POST',
+      headers: {'content-Type': 'application/json',},
+      data: param,});
+const checkCertResponse = await checkCertRequest;
+if (checkCertResponse.error) {
+      console.log(checkCertResponse.error);
+      console.log(checkCertResponse);
+      throw Error(`Request failed:` + email +';' + app_id +';' + checkCertResponse.message);
+}
+const reqData = checkCertResponse.data
+return Functions.encodeString(reqData);
+
+######
+Tips for chainlink function in solidity
+######
+1. must trim output string from REST API in javascript
+2. Dont dont string manipulate in solidity e.g extract dilimited string
+3. Dont import 3rd party strings.sol
+4. the mapping key in solidity cannot be too long
+
+5. If you use functional URL, it lambda function should not add CORS headers
+https://srxthihpe6katdxmkpz6nb7f5m0nctsi.lambda-url.ap-southeast-1.on.aws/

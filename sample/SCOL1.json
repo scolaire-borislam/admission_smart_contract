@@ -1,0 +1,7 @@
+{
+    "name": "Scolaire Token",
+    "description": "This is a student record NFT",
+    "image": "http://2023-project-public.s3-website-ap-southeast-1.amazonaws.com/nft/SCOL_IMG_1.jpg",
+    "tokenId" : 1,
+    "studentId": "H2400031"
+}

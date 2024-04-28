@@ -1,0 +1,7 @@
+{
+    "name": "Scolaire Token",
+    "description": "This is a student record NFT",
+    "image": "https://l3q73ezi2i.execute-api.ap-southeast-1.amazonaws.com/Prod/GetTokenImage/5",
+    "tokenId" : 5,
+    "studentId": "H2400031"
+}
